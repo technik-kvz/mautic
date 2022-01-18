@@ -818,6 +818,10 @@ class CommonApiController extends AbstractFOSRestController implements MauticCon
                 $entities = $entities->getIterator()->getArrayCopy();
             }
 
+            if ($entities instanceof \ArrayObject) {
+                $entities = $entities->getArrayCopy();
+            }
+
             return $idHelper->orderByOriginalKey($entities);
         }
 
