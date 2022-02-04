@@ -46,7 +46,7 @@ class CleanupMaintenanceCommand extends ContainerAwareCommand
                     new InputOption(
                         'gdpr-days-old', 
                         'g-d', 
-                        InputOption::VALUE_NONE, 
+                        InputOption::VALUE_OPTIONAL, 
                         'Delete data older than this number of days to fullfil GDPR requirement. Defaults to 3 * 365 days.', 
                         1095
                     ),
